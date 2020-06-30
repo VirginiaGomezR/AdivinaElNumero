@@ -1,5 +1,6 @@
 'use strict';
 let inputNumber = document.querySelector('.inputNumber');
+let text = document.querySelector('.text');
 const button = document.querySelector('.js-clickButton');
 
 //Función que genera número aleatorio
@@ -14,11 +15,11 @@ console.log(randomNumber);
 
 function validationNumber(randomNumber) {
   if (randomNumber > inputNumber.value) {
-    console.log('Demasiado bajo');
+    text.innerHTML = 'Demasiado bajo';
   } else if (randomNumber == inputNumber.value) {
-    console.log('Has ganado campeona!');
+    text.innerHTML = 'Has ganado campeona!';
   } else {
-    console.log('Demasiado alto');
+    text.innerHTML = 'Demasiado alto';
   }
 }
 
