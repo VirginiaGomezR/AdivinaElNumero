@@ -21,6 +21,8 @@
 .message,
 .textTry {
   border: 2px solid grey;
+  height: 30px;
+  width: 300px;
 }
 
 .clickButton {
