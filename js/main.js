@@ -1,7 +1,6 @@
 'use strict';
 let inputNumber = document.querySelector('.inputNumber');
 let text = document.querySelector('.text');
-let triesButton = document.querySelector('.tries');
 const button = document.querySelector('.js-clickButton');
 
 //Función que genera número aleatorio
