@@ -15,7 +15,7 @@ console.log(randomNumber);
 //Funcion: validación de número
 
 function validationNumber(randomNumber) {
-  if (randomNumber > 100 || randomNumber < 0) {
+  if (randomNumber >= 100 || randomNumber <= 0) {
     text.innerHTML = 'El número debe estar entre 1 y 100';
   } else if (randomNumber > inputNumber.value) {
     text.innerHTML = 'Demasiado bajo';
@@ -27,7 +27,7 @@ function validationNumber(randomNumber) {
 }
 
 //Funcion: contador de intentos
-let acc = 1;
+let acc = 0;
 function counter() {
   tries.innerHTML = acc++;
 }
