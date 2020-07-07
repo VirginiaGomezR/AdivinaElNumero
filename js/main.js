@@ -10,11 +10,13 @@ function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
 const randomNumber = getRandomNumber(max);
-console.log(randomNumber);
+console.log('Mi número aleatorio es:', randomNumber);
 
 //Funcion: validación de número
 
 function validationNumber(randomNumber) {
+  let Number = parseInt(inputNumber.value);
+
   if (randomNumber >= 100 || randomNumber <= 0) {
     text.innerHTML = 'El número debe estar entre 1 y 100';
   } else if (randomNumber > inputNumber.value) {
