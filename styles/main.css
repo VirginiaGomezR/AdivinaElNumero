@@ -1,6 +1,8 @@
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
@@ -21,13 +23,15 @@
 .message,
 .textTry {
   border: 2px solid grey;
+  width: 300px;
 }
 
-.clickButton {
-  background-color: aqua;
+.js-clickButton {
+  background-color: blueviolet;
   color: white;
   font-weight: bold;
   margin-top: 30px;
   height: 30px;
   border-radius: 8px;
+  outline: none;
 }

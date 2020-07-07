@@ -1,6 +1,7 @@
 'use strict';
 let inputNumber = document.querySelector('.inputNumber');
 let text = document.querySelector('.text');
+const tries = document.querySelector('.tries');
 const button = document.querySelector('.js-clickButton');
 
 //Función que genera número aleatorio
@@ -11,7 +12,7 @@ function getRandomNumber(max) {
 const randomNumber = getRandomNumber(max);
 console.log(randomNumber);
 
-//Funciones
+//Funcion: validación de número
 
 function validationNumber(randomNumber) {
   if (randomNumber > 100 || randomNumber < 0) {
@@ -25,4 +26,19 @@ function validationNumber(randomNumber) {
   }
 }
 
-button.addEventListener('click', () => validationNumber(randomNumber));
+//Funcion: contador de intentos
+let acc = 1;
+function counter() {
+  tries.innerHTML = acc++;
+}
+
+//Funcion: función manejadora
+
+function handlerEvent(ev) {
+  ev.preventDefault();
+  validationNumber();
+  counter();
+}
+
+//button.addEventListener('click', () => validationNumber(randomNumber));
+button.addEventListener('click', handlerEvent);
