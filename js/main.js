@@ -14,7 +14,9 @@ console.log(randomNumber);
 //Funciones
 
 function validationNumber(randomNumber) {
-  if (randomNumber > inputNumber.value) {
+  if (randomNumber > 100 || randomNumber < 0) {
+    text.innerHTML = 'El número debe estar entre 1 y 100';
+  } else if (randomNumber > inputNumber.value) {
     text.innerHTML = 'Demasiado bajo';
   } else if (randomNumber == inputNumber.value) {
     text.innerHTML = 'Has ganado campeona!';
