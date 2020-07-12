@@ -14,17 +14,19 @@ console.log('Mi número aleatorio es:', randomNumber);
 
 //Funcion: validación de número
 
-function validationNumber(randomNumber) {
+function validationNumber() {
   let number = parseInt(inputNumber.value);
 
-  if (randomNumber >= 100 || randomNumber <= 0) {
-    text.innerHTML = 'El número debe estar entre 1 y 100';
-  } else if (randomNumber > inputNumber.value) {
-    text.innerHTML = 'Demasiado bajo';
-  } else if (randomNumber == inputNumber.value) {
-    text.innerHTML = 'Has ganado campeona!';
+  if (number >= 1 && number <= 100) {
+    if (number > randomNumber) {
+      text.innerHTML = 'Demasiado alto';
+    } else if (number < randomNumber) {
+      text.innerHTML = 'Demasiado bajo';
+    } else if (number === randomNumber) {
+      text.innerHTML = 'Has ganado campeona!';
+    }
   } else {
-    text.innerHTML = 'Demasiado alto';
+    text.innerHTML = 'El número debe estar entre 1 y 100';
   }
 }
 
