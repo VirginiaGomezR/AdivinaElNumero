@@ -44,5 +44,4 @@ function handlerEvent(ev) {
   counter();
 }
 
-//button.addEventListener('click', () => validationNumber(randomNumber));
 button.addEventListener('click', handlerEvent);
