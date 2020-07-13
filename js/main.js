@@ -33,7 +33,8 @@ function validationNumber() {
 //Funcion: contador de intentos
 let acc = 0;
 function counter() {
-  tries.innerHTML = acc++;
+  acc = acc + 1;
+  tries.innerHTML = acc;
 }
 
 //Funcion: función manejadora
